@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/drawee"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_user_fund_user_head"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="70dp"
+        fresco:layout_constraintStart_toStartOf="parent"
+        fresco:layout_constraintTop_toTopOf="parent"
+        fresco:roundAsCircle="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="56dp"
+        android:text="点击吐司"
+        fresco:layout_constraintStart_toStartOf="parent"
+        fresco:layout_constraintTop_toBottomOf="@+id/drawee" />
+
+
+</android.support.constraint.ConstraintLayout>
