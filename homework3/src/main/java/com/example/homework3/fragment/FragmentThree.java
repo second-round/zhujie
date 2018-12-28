@@ -16,17 +16,26 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-public class FragmentThree extends Fragment {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    private TextView textView;
+public class FragmentThree extends Fragment {
+    @BindView(R.id.textView4)
+    TextView textView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragmentthree,container,false);
-        textView = view.findViewById(R.id.textView4);
         return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ButterKnife.bind(this,view);
+    }
+
     @Subscribe(threadMode = ThreadMode.POSTING,sticky = true)
     public void onEvent(EvBean evBean){
         int name=evBean.getNum();
