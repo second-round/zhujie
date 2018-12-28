@@ -20,7 +20,7 @@
             android:layout_weight="9"
             android:layout_height="match_parent" />
         <ImageView
-            android:id="@+id/huan"
+            android:id="@+id/huans"
             android:layout_width="0dp"
             android:background="@mipmap/ic_launcher"
             android:layout_weight="1"

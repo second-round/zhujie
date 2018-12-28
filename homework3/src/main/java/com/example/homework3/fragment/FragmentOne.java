@@ -32,14 +32,14 @@ public class FragmentOne extends Fragment {
             @Override
             public void onClick(View view) {
                 EventBus.getDefault().unregister(this);
-                EventBus.getDefault().postSticky(new EvBean(1,"张自磊我喜欢的人"));
+                EventBus.getDefault().postSticky(new EvBean(1,"lllll啦啦啦啦"));
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EventBus.getDefault().unregister(this);
-                EventBus.getDefault().postSticky(new EvBean(2,"啦啦啦,张自磊我喜欢的人"));
+                EventBus.getDefault().postSticky(new EvBean(2,"啦啦啦777777777777"));
             }
         });
     }

@@ -16,6 +16,8 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import butterknife.ButterKnife;
+
 public class FragmentTwo extends Fragment {
     private TextView textView;
     @Nullable
@@ -23,6 +25,7 @@ public class FragmentTwo extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragmenttwo,container,false);
         textView=view.findViewById(R.id.textView4);
+        ButterKnife.bind(getActivity());
         return view;
 
     }
@@ -43,8 +46,8 @@ public class FragmentTwo extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onPause() {
+        super.onPause();
         EventBus.getDefault().unregister(this);
     }
 }

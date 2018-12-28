@@ -25,9 +25,9 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements IView {
     @BindView(R.id.recycle)
-    private XRecyclerView xRecyclerView;
-    @BindView(R.id.huan)
-    private ImageView huan;
+    XRecyclerView xRecyclerView;
+    @BindView(R.id.huans)
+    ImageView huan;
     private PersenterImpl persenter;
     private boolean isLiear=true;
     private String path;
